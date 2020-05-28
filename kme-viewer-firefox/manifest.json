@@ -16,6 +16,11 @@
             "default_title": "KME Viewer",
             "default_popup": "popup/popup.html"
           },
+        "background":{
+            "scripts" : ["background.js"],
+            "persistent" : false
+
+        },
         "content_scripts": [
             {
                 "matches": [
@@ -23,7 +28,7 @@
                     "*://*.schweizmobil.ch/*"
                 ],
                 "js": [
-                    "borderify.js"
+                    "script.js"
                 ]
             }
         ]

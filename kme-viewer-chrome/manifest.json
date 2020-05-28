@@ -1,0 +1,29 @@
+{
+    "manifest_version": 2,
+    "name": "KME Viewer 0.2",
+    "description": "Calcul des kme et du temps de marche",
+    "version": "0.2",
+    "browser_action": {
+        "default_icon": "img/icon-32.png",
+        "default_popup": "popup.html"
+    },
+    "icons" : {
+        "128": "img/icon-128.png"
+    },
+    "permissions": [
+        "http://map.geo.admin.ch/*",
+        "https://map.geo.admin.ch/*",
+        "activeTab",
+        "tabs",
+        "http://*/*",
+        "https://*/*"
+    ],
+    "content_scripts":[
+        {
+            "matches": ["*://map.geo.admin.ch/*"],
+            "js" : ["js/map_geo_admin.js"]
+        }
+    ]
+
+    
+}
